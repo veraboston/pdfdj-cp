@@ -22,6 +22,8 @@ namespace PdfDJ.Library.Operations
         /// <returns></returns>
         public static List<FileInfo> SplitPDFFile(string pdfFilePath, string outputDir, IList<int> pageNumbers)
         {
+           Console.WriteLine("Start split PDF file"); 
+            
             try
             {
                 FileInfo pdfFileInfo = new FileInfo(pdfFilePath);
@@ -49,6 +51,8 @@ namespace PdfDJ.Library.Operations
                 l.Error("{0}", ex.Message);
                 throw;
             }
+
+            Console.WriteLine("End split");
         }
 
         /// <summary>
